@@ -42,6 +42,7 @@
 
 .about__card {
   background: var(--color-bg-variant);
+  width: 10rem;
   border: 1px solid transparent;
   border-radius: 1rem;
   padding: 2rem;
@@ -71,6 +72,9 @@
 }
 
 .cards__container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
 }
 
@@ -79,6 +83,10 @@
   .about__container {
     grid-template-columns: 1fr;
     gap: 0;
+  }
+
+  .cards__container {
+    margin-left: 0.7rem;
   }
 
   .about__me {
@@ -94,7 +102,7 @@
 /* MEDIA QUERIES (SMALL DEVICE) */
 @media screen and (max-width: 600px) {
   .about__me {
-    width: 65%;
+    width: 50%;
     margin: 0 auto 3rem;
   }
 
@@ -102,10 +110,22 @@
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
+
+  .about__card {
+    width: 6rem;
+  }
+
+  .about__card h5 {
+    display: flex;
+    justify-content: center;
+  }
   .about__content {
     text-align: center;
   }
   .about__container p {
     margin: 1.5rem 0;
+  }
+
+  .cards__container {
   }
 }
